@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Nikel</title>
+  </head>
+  <body id="login">
+    <main>
+      <div class="container">
+        <div class="row vh-100">
+          <div class="col d-flex flex-column my-5 justify-content-center">
+            <div id="title">
+              <p>Organize suas finanças de uma forma fácil.</p>
+              <p>Controle o seu dinheiro e seus investimentos.</p>
+              <p>Economize e atinja seus objetivos.</p>
+            </div>
+            <div id="image" class="text-center">
+              <img
+                src="./images/pocket.png"
+                alt="Imagem Pocket"
+                class="img-fluid"
+              />
+              <img
+                src="./images/coins.png"
+                alt="Imagem Coins"
+                class="img-fluid d-none d-md-inline coins"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="container">
+              <div class="row">
+                <div class="col d-flex justify-content-center my-5 flex-column">
+                  <div id="logo" class="text-center mb-3 mt-5">
+                    <img src="./images/nikel-logo.png" alt="Logotipo Nikel" />
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <form id="login-box">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">E-mail</label>
+                      <input id="email" class="form-control" type="email" />
+                      <div class="form-text" id="emailHelper">
+                        Utilize seu e-mail para realizar login
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Senha</label>
+                      <input
+                        id="password"
+                        class="form-control"
+                        type="password"
+                      />
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="check-session"
+                      />
+                      <label for="check-session" class="form-check-label"
+                        >Manter logado</label
+                      >
+                    </div>
+                    <button type="submit" class="btn button-login">
+                      Entrar
+                    </button>
+                  </form>
+                </div>
+                <div class="row text-center mt-2" id="new-account">
+                  <div class="col">
+                    <p
+                      data-bs-toggle="modal"
+                      data-bs-target="#open-new-account"
+                    >
+                      Ainda não tem conta?
+                      <span id="create-account" class="link-create"
+                        >Criar uma conta.</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="col mt-5">
+                  <div class="text-center">
+                    <img
+                      src="./images/codai-logo.png"
+                      alt="Logotipo Codaí"
+                      srcset=""
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="text-center">
+                    <img
+                      src="./images/growdev-logo.png"
+                      alt="Logotipo GrowDev"
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="open-new-account"
+        tabindex="-1"
+        aria-labelledby="open-new-account"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Crie sua conta</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form id="create-login">
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="create-email" class="form-label">E-mail</label>
+                  <input id="create-email" class="form-control" type="email" required/>
+                  <div class="form-text" id="emailHelper">
+                    Utilize seu melhor e-mail para criar a conta
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="create-password" class="form-label"
+                    >Digite a senha</label
+                  >
+                  <input
+                    id="create-password"
+                    class="form-control"
+                    type="password"
+                    required                  />
+                </div>
+                <div class="mb-3">
+                  <label for="create-password-confirmation" class="form-label"
+                    >Digite novamente a senha</label
+                  >
+                  <input
+                    id="create-password-confirmation"
+                    class="form-control"
+                    type="password"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Criar conta
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

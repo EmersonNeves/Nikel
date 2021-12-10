@@ -1,0 +1,143 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.color-primary {
+  color: #1347af;
+}
+
+#login {
+  background: linear-gradient(120deg, #1347af 44.9%, #fff 45%) no-repeat fixed;
+}
+
+#home,
+#transactions {
+  background: linear-gradient(120deg, #fff 44.9%, #1347af 45%) no-repeat fixed;
+}
+
+header {
+  border-bottom: 1px solid #bebcbc;
+  padding: 5px;
+  background: #fff;
+}
+
+.info {
+  background-color: #fff;
+  border-radius: 25px 25px 0 0;
+  padding: 20px 20px 0;
+}
+
+.icon-detail {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.button-default {
+  background-color: #1347af;
+  color: #fff;
+}
+
+.button-default:hover {
+  background-color: rgba(19, 71, 174, 0.9);
+  color: #fff;
+}
+
+.button-float {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  border: 2px solid #ffffff;
+  width: 60px;
+  height: 60px;
+  margin-left: 12px;
+  margin-right: 12px;
+  border-radius: 120px;
+  overflow: hidden;
+  z-index: 0;
+  font-size: 2rem;
+  padding: 0 !important;
+  color: rgba(19, 71, 174, 0.9);
+}
+.button-float::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.25s ease;
+  border-radius: 120px;
+}
+
+.button-float::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.25s ease;
+  border-radius: 120px;
+}
+
+.button-float-fill::before {
+  transition-duration: 0.5s;
+  box-shadow: inset 0 0 0 1px transparent;
+}
+
+.button-float-fill:hover::before {
+  box-shadow: inset 0 0 0 60px rgba(0, 115, 255, 0.932);
+}
+
+.icon {
+  color: #fdfdfd;
+  position: relative;
+  z-index: 1;
+}
+
+#title p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#image .coins {
+  position: absolute;
+  bottom: 100px;
+}
+
+#login-box .button-login {
+  background-color: #1347af;
+  border-radius: 10px;
+  color: #fff;
+  width: 50%;
+  margin: 0 25%;
+}
+
+#login-box .button-login:hover {
+  background-color: rgba(19, 71, 174, 0.8);
+}
+
+#new-account .link-create {
+  color: #1347af;
+  cursor: pointer;
+}
+
+#new-account .link-create:hover {
+  color: rgba(19, 71, 174, 0.8);
+}
+
+.item {
+  min-width: 0.9rem;
+}
+
+.check-options{
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+}
