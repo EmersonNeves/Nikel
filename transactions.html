@@ -49,7 +49,7 @@
                     <i class="bi bi-person-circle fs-3"></i>
                   </button>
                   <ul class="dropdown-menu item " aria-labelledby="dropdown">
-                    <li><a class="dropdown-item" href="#">Sair</a></li>
+                    <li><button class="dropdown-item"  id="buttonLogout">Sair</button></li>
                   </ul>
                 </div>
             </div>
@@ -85,24 +85,8 @@
                         <th scope="col">Descrição</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">05/11/2021</th>
-                        <td>R$ 2850,00</td>
-                        <td>Entrada</td>
-                        <td>Salário</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">10/11/2021</th>
-                        <td>R$ 89,00</td>
-                        <td>Saída</td>
-                        <td>Conta de internet</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">10/11/2021</th>
-                        <td colspan="2">R$ 50,00</td>
-                        <td>Conta do telefone</td>
-                      </tr>
+                    <tbody id="transactionList">
+                      
                     </tbody>
                   </table>
                 </div>
@@ -112,48 +96,51 @@
         <button class="btn button-float button-float-fill" data-bs-target="#transactionModal" data-bs-toggle="modal"><i class="bi bi-plus icon icon-fill"></i></button>
         </div>
             <!-- Modal -->
-    <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Cadastro de lançamento</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-           <div class="mb-3">
-             <label for="value-input" class="form-label">Valor</label>
-             <input type="text" name="value" id="value" class="form-control">
-           </div>
-           <div class="mb-3">
-             <label for="description-input">Descrição</label>
-             <input type="text" name="description" id="description" class="form-control">
-           </div>
-           <div class="mb-3">
-            <label for="date-input" class="form-label">Data</label>
-            <input type="date" name="value" id="value" class="form-control">
-          </div>
-          <div class="mb-3 check-options text-center">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" checked name="inlineCheck" id="inlineIncome" value="income">
-              <label class="form-check-label" for="income" >Entrada</label>
+            <div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="transactionModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <class class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastro de lançamento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <form id="transactionForm">
+                  <div class="modal-body">
+                   <div class="mb-3">
+                     <label for="value-input" class="form-label">Valor</label>
+                     <input type="text" name="value" id="value" class="form-control" required>
+                   </div>
+                   <div class="mb-3">
+                     <label for="description-input">Descrição</label>
+                     <input type="text" name="description" id="description" class="form-control" required>
+                   </div>
+                   <div class="mb-3">
+                    <label for="date-input" class="form-label">Data</label>
+                    <input type="date" name="value" id="date" class="form-control" required>
+                  </div>
+                  <div class="mb-3 check-options text-center">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="type-input"  checked name="inlineCheck" id="inlineIncome" value="income">
+                      <label class="form-check-label" for="income" >Entrada</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="type-input" name="inlineCheck" id="inlineOutcome" value="outcome">
+                      <label class="form-check-label" for="outcome">Saída</label>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                  </div>
+                </div>
+                </form>
+              </div>
             </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineCheck" id="inlineOutcome" value="outcome">
-              <label class="form-check-label" for="outcome">Saída</label>
-            </div>
-          </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Adicionar</button>
-          </div>
-        </div>
-      </div>
-    </div>
       </main>
   
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  
-    
-</body>
+      
+      <script src="./js/transactions.js"></script>
+
+    </body>
 </html>
